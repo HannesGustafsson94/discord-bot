@@ -17,6 +17,8 @@ module.exports = {
         const index = Math.floor(Math.random() * json.results.length)
         if (json.results[index].url) {
             message.channel.send(json.results[index].url)
+        } else {
+            message.channel.send('Gif search invalid!')
         }
     }
 }
