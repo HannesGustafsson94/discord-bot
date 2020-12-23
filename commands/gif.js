@@ -4,14 +4,14 @@ module.exports = {
     description: 'Send a random gif',
     callback: async (message) => {
         message.delete();
-        try {
-            const fetch = require('node-fetch')
-            let keywords = 'excited'
-            let tokens = message.content.split(' ')
+        const fetch = require('node-fetch')
+        let keywords = 'excited'
+        let tokens = message.content.split(' ')
 
-            if (tokens.length > 1) {
-                keywords = tokens.slice(1, tokens.length).join("")
-            }
+        if (tokens.length > 1) {
+            keywords = tokens.slice(1, tokens.length).join("")
+        }
+        try {
             let url = `https://api.tenor.com/v1/search?q=${keywords}&key=${process.env.TENORKEY}&contentfilter=off`
             let response = await fetch(url);
             let json = await response.json()
