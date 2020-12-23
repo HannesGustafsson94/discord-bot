@@ -6,7 +6,7 @@ module.exports = {
     category: 'Utiity',
     description: 'Just a ping command',
     callback: (message) => {
-        message.channel.delete(500);
+        message.delete();
         message.channel.send('pong')
     }
 }

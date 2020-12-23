@@ -3,7 +3,7 @@ module.exports = {
     category: 'Fun',
     description: 'Send a random gif',
     callback: async (message) => {
-        message.channel.delete(500);
+        message.delete();
         const fetch = require('node-fetch')
         let keywords = 'excited'
         let tokens = message.content.split(' ')

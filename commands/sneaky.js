@@ -3,7 +3,7 @@ module.exports = {
     category: 'Utiity',
     description: 'Just why',
     callback: (message) => {
-        message.channel.delete(500);
+        message.delete();
         message.channel.send('Fight me! Mooo!')
     }
 }
