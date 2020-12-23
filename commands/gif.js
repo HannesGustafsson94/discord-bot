@@ -22,7 +22,7 @@ module.exports = {
             }
         }
         catch {
-            message.channel.send('Invalid search term')
+            message.channel.send(`Invalid search term: ${keywords}`)
         }
     }
 }
