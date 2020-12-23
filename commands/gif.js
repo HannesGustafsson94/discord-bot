@@ -18,7 +18,7 @@ module.exports = {
             const index = Math.floor(Math.random() * json.results.length)
             if (json.results[index].url) {
                 message.channel.send(json.results[index].url)
-                message.channel.send('GIF Search term: ${keywords}')
+                message.channel.send(`GIF Search term: ${keywords}`)
             }
         }
         catch {
